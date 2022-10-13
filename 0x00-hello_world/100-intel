@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -masm=intel $CFILE -o CIFLE.o
+gcc -S -masm=intel $CFILE -o CFILE.o
