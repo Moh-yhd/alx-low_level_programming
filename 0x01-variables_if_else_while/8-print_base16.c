@@ -10,17 +10,17 @@
 
 int main(void)
 {
-	char dS = '0';
-	char dE = '9';
-	char ch = start;
-	char start1 = 'A';
-	char end1 = 'Z';
+	int dS = '0';
+	int dE = '9';
+	int dig = dS;
+	char start1 = 'a';
+	char end1 = 'f';
 	char ch1 = start1;
 
-	while (ch <= end)
+	while (dig <= dE)
 	{
-		putchar(ch);
-		ch = ch + 1;
+		putchar(dig);
+		dig = dig + 1;
 	}
 	while (ch1 <= end1)
 	{
