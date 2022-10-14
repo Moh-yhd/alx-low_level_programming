@@ -11,8 +11,8 @@
 int main(void)
 {
 	int a = '0';
-	char co = ',';
-	char sp = ' ';
+	int co = ',';
+	int sp = ' ';
 
 	while (a >= '0' && a <= '9')
 	{
