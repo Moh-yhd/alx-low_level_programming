@@ -9,7 +9,7 @@
 */
 
 int main(void)
-{	
+{
 	char start = 'a';
 	char end = 'z';
 	char ch = start;
