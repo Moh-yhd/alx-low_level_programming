@@ -10,12 +10,22 @@
 
 int main(void)
 {
-	int a = '0';
+	char dS = '0';
+	char dE = '9';
+	char ch = start;
+	char start1 = 'A';
+	char end1 = 'Z';
+	char ch1 = start1;
 
-	while (a >= '0' && a <= '9')
+	while (ch <= end)
 	{
-		putchar(a);
-		a = a + 1;
+		putchar(ch);
+		ch = ch + 1;
+	}
+	while (ch1 <= end1)
+	{
+		putchar(ch1);
+		ch1 = ch1 + 1;
 	}
 	putchar('\n');
 	return (0);
