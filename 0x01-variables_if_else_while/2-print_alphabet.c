@@ -11,10 +11,16 @@
 int main(void)
 {
 	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
-	while (*alpha != '\0')
+	
+	char start = 'a';
+	char end = 'z';
+	char ch = start;
+
+	while (ch != end)
 	{
-		putchar(*alpha);
-		a = a + 1;
+		putchar(ch);
+		ch = ch + 1;
 	}
+	putchar('z');
 	return (0);
 }
