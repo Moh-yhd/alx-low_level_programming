@@ -16,7 +16,7 @@ int main(void)
 	char start1 = 'A';
 	char end1 = 'Z';
 	char ch1 = start1;
-	
+
 	while (ch <= end)
 	{
 		putchar(ch);
