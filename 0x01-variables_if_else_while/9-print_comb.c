@@ -17,8 +17,7 @@ int main(void)
 	while (a >= '0' && a <= '9')
 	{
 		putchar(a);
-		putchar(co);
-		if (a <= 9)
+		if (a <= '9')
 		{
 			putchar(co);
 			putchar(sp);
