@@ -9,18 +9,16 @@
 */
 
 int main(void)
-{
-	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
-	
+{	
 	char start = 'a';
 	char end = 'z';
 	char ch = start;
 
-	while (ch != end)
+	while (ch <= end)
 	{
 		putchar(ch);
 		ch = ch + 1;
 	}
-	putchar('z');
+	putchar('\n');
 	return (0);
 }
