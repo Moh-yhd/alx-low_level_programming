@@ -10,6 +10,11 @@
 
 int main(void)
 {
-	putchar("abcdefghijklmnopqrstuvwxyz\n");
+	char alpha[] = "abcdefghijklmnopqrstuvwxyz";
+	while (*alpha != '\0')
+	{
+		putchar(*alpha);
+		a = a + 1;
+	}
 	return (0);
 }
