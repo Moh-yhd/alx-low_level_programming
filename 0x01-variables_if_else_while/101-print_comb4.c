@@ -19,7 +19,7 @@ int main(void)
 	{
 		j = 48;
 		while (j >= 48 && j <= 57)
-		{	
+		{
 			k = 48;
 			while (k >= 48 && k <= 57)
 			{
@@ -29,8 +29,8 @@ int main(void)
 				putchar(j);
 				putchar(k);
 			}
-			if (i + j < 113 && i < j && j < k)
-			{
+			if (i + j + k < 168 && i < j && j < k)
+			{i
 				putchar(co);
 				putchar(sp);
 			}
