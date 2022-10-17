@@ -19,15 +19,12 @@ int main(void)
 		j = 48;
 		while (j >= 48 && j <= 57)
 		{
-			if (i != j + 1 && i != j + 2 && i != j + 3 && i != j + 4 && i != j + 5 &&
-					i != j + 6 && i != j + 7 && i != j + 8 && i != j + 9 && i != j)
+			if (i < j)
 			{
 				putchar(i);
 				putchar(j);
 			}
-			if (i + j < 113 && i != j + 1 && i != j + 2 && i != j + 3 && i != j + 4 &&
-					i !=	j + 5 && i != j + 6 && i != j + 7 && i != j + 8
-					&& i != j + 9 && i != j)
+			if (i + j < 113 && i < j)
 			{
 				putchar(co);
 				putchar(sp);
