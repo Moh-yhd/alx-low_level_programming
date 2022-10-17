@@ -1,9 +1,9 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - createa every possible comibations of two digit numbers"
+ * main - this program prints all the combinations of two two digit numbers"
  *
- * Return: returns zero if succcess
+ * Return: returns zero if success
  */
 
 int main(void)
@@ -19,18 +19,21 @@ int main(void)
 		while (j >= 48 && j <= 57)
 		{
 			k = 48;
-			while (k >= 48 && k >= 57)
+			while (k >= 48 && k <= 57)
 			{
 				l = 48;
-					while (l >= 48 && j <= 57)
-					{
-						putchar(i);
-						putchar(j);
-						putchar(k);
-						putchar(l);
-						l = l + 1;
-					}
-					k = k + 1;
+				while (l >= 48 && l <= 57)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(l);
+					putchar(',');
+					putchar(' ');
+					l = l +1;
+				}
+				k = k + 1;
 			}
 			j = j + 1;
 		}
