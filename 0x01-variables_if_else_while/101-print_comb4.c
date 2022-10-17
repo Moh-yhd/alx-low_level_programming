@@ -30,7 +30,7 @@ int main(void)
 				putchar(k);
 			}
 			if (i + j + k < 168 && i < j && j < k)
-			{i
+			{
 				putchar(co);
 				putchar(sp);
 			}
