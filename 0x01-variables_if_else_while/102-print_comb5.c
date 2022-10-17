@@ -24,6 +24,8 @@ int main(void)
 				l = 48;
 				while (l >= 48 && l <= 57)
 				{
+					if (i != j != k != l)
+					{
 					putchar(i);
 					putchar(j);
 					putchar(' ');
@@ -31,7 +33,8 @@ int main(void)
 					putchar(l);
 					putchar(',');
 					putchar(' ');
-					l = l +1;
+					}
+					l = l + 1;
 				}
 				k = k + 1;
 			}
