@@ -19,12 +19,12 @@ int main(void)
 		j = 48;
 		while (j >= 48 && j <= 57)
 		{
-			if (i != j + 1)
+			if (i != j + 1 && i != j)
 			{
 				putchar(i);
 				putchar(j);
 			}
-			if (i + j < 114 && i != j + 1)
+			if (i + j < 114 && i != j + 1 && i != j)
 			{
 				putchar(co);
 				putchar(sp);
