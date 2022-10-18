@@ -15,9 +15,9 @@ void print_alphabet(void);
  */
 void print_alphabet(void)
 {
-	int a = 'z';
+	int a = 'a';
 
-	while (a <= 'z' && a >= 'a')
+	while (a >= 'a' && a <= 'z')
 	{
 		_putchar(a);
 		a--;
