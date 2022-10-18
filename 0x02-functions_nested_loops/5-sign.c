@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - checks if a number is negative, positive or zero
+ * print_sign - checks if a number is negative, positive or zero
  * @n: n is a number
  * Return: returns 1 if n is positive, 0 if n is zero, and -1 if n is negative
  */
