@@ -6,6 +6,8 @@
  * Return: zero if success
  */
 
+void print_alphabet(void);
+
 int main(void)
 {
 	int a = 'z';
