@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * jack_bower - prints every minute of jack bauer's 24
- * 
+ * jack_bauer - prints every minute of jack bauer's 24
+ *
  * Return: void
  */
 void jack_bauer(void)
@@ -38,4 +38,5 @@ void jack_bauer(void)
 		}
 		i = i + 1;
 	}
+	putchar('\n')
 }
