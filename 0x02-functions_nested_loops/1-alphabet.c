@@ -8,6 +8,11 @@
 
 void print_alphabet(void);
 
+/**
+ * print_alphabet - prints the alphabet in reverse order"
+ *
+ * Return: returns nothing
+ */
 void print_alphabet(void)
 {
 	int a = 'z';
