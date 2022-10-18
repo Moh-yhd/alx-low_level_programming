@@ -15,6 +15,6 @@ int print_last_digit(int n)
 		m = -m;
 	}
 
-	_putchar(m + '0')
+	_putchar(m + '0');
 	return (m);
 }
