@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _islower - checks if a letter is a lowercase or not"
- *
+ * _islower - checks if a letter is a lowercase or not
+ * @c: c is an alphabet
  * Return: returns 0 or 1
  */
 int _islower(int c)
@@ -11,10 +11,9 @@ int _islower(int c)
 
 	if (c >= 'a' && c <= 'z')
 	{
-		result = 0;
+		result = 1;
 	}
 	else
-		result = 1;
-	
+		result = 0;
 	return (result);
 }
