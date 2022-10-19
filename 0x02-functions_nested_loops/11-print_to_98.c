@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - prints natural numbers up to 98" 
+ * print_to_98 - prints natural numbers up to 98
  * @n: n is any integer
  * Retrun: void
  */
@@ -43,4 +43,3 @@ void print_to_98(int n)
 	}
 	printf("\n");
 }
-
