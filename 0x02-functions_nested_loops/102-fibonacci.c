@@ -12,6 +12,7 @@ int main(void)
 	long int a = 0;
 	long int b = 1;
 	long int fib;
+
 	while (i <= 50)
 	{
 		fib = a + b;
