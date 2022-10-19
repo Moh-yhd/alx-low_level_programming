@@ -6,11 +6,10 @@
  * Retrun: void
  */
 
+void  printer(int n);
 void print_times_table(int n)
 {
-	int i = 0;
-	int j;
-	int m;
+	int i = 0, j, m;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -21,9 +20,7 @@ void print_times_table(int n)
 			{
 				m = i * j;
 				if (j == 0)
-				{
 					_putchar('0');
-				}
 				else if (m <= 9)
 				{
 					_putchar(',');
@@ -34,11 +31,7 @@ void print_times_table(int n)
 				}
 				else if (m > 9 && m < 100)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(m / 10 + '0');
-					_putchar(m % 10 + '0');
+					printer(m);
 				}
 				else
 				{
@@ -54,4 +47,19 @@ void print_times_table(int n)
 			i++;
 		}
 	}
+}
+
+/**
+ * printer - prints an integer using putchar function
+ * @n: is any integer
+ * Retrun: void
+ */
+
+void printer(int n)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(n / 10 + '0');
+	_putchar(n % 10 + '0');
 }
