@@ -17,7 +17,10 @@ int main(void)
 	while (i)
 	{
 		fib = a + b;
+		if (fib % 2 == 0)
+		{
 		fibSum = fibSum + fib;
+		}
 		a = b;
 		b = fib;
 		i++;
