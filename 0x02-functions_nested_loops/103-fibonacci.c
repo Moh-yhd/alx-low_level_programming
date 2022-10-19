@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * fibunacci - this function prints the sum of even fibunacci numbers less than 4,000,000
+ * main - this function prints sum of even fibunacci numbers < 4,000,000
  *
  * Return: returns zero if success
  */
 
-int fibunacci(void)
+int main(void)
 {
 	int i = 1;
 	long int a = 0;
@@ -17,15 +17,13 @@ int fibunacci(void)
 	while (i)
 	{
 		fib = a + b;
+		fibSum = fibSum + fib;
 		a = b;
 		b = fib;
-		if (fib / 2 == 0)
-		{
-			fibSum = fibSum + fib;
-		}
+		i++;
 		if (fib > 4000000)
 			break;
-		i++;
+
 	}
 	printf("%ld\n", fibSum);
 	return (0);
