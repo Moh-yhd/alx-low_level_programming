@@ -9,15 +9,17 @@
 int main(void)
 {
 	int i = 1;
-	int a = 0;
-	int b = 1;
-	int fib;
+	long int a = 0;
+	long int b = 1;
+	long int fib;
 	while (i <= 50)
 	{
 		fib = a + b;
 		a = b;
 		b = fib;
-		printf("%d, ", fib);
+		printf("%ld", fib);
+		if (i < 50)
+			printf(", ");
 		i++;
 	}
 	printf("\n");
