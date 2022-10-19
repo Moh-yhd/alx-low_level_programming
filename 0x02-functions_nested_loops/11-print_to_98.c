@@ -6,48 +6,41 @@
  *
  * Retrun: void
  */
-
 void print_to_98(int n)
 {
-	int i;
+	int i = n;
+
 	if (n < 98)
 	{
-		i = n;
 		while (i <= 98)
 		{
-			if (i / 10 == 0)
-			{
-				putchar(i + '0');
-			}
-			else
-			{
-				putchar(i / 10 + '0');
-				putchar(i % 10 + '0');
-			}
+			printf("%d", i);
 			if (i != 98)
 			{
-				putchar(',');
-				putchar(' ');
+				printf(",");
+				printf(" ");
 			}
-				i++;
+			i++;
 		}
 	}
-	if (n > 98)
+	else if (n == 98)
+	{
+		printf("%d", i);
+	}
+	else
 	{
 		i = n;
 		while (i >= 98)
 		{
-			if (i / 10 == 0)
+			printf("%d", i);
+			if (i != 98)
 			{
-				putchar(i + '0');
-			}
-			else
-			{
-				putchar(i / 10 + '0');
-				putchar(i % 10 + '0');
+				printf(",");
+				printf(" ");
 			}
 			i--;
 		}
 	}
-	putchar('\n');
+	printf("\n");
 }
+
