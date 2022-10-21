@@ -21,24 +21,24 @@ void print_number(int n)
 	}
 	if (m > 999)
 	{
-		_putchar((m / 1000) + '0');
-		_putchar((m % 1000) / 100 + '0');
-		_putchar(((m % 1000) % 100) / 10 + '0');
-		_putchar(((m % 1000) % 100) % 10 + '0');
+		_putchar((m / 1000) + 48);
+		_putchar((m % 1000) / 100 + 48);
+		_putchar(((m % 1000) % 100) / 10 + 48);
+		_putchar(((m % 1000) % 100) % 10 + 48);
 	}
 	else if (m > 99)
 	{
-		_putchar((m / 100) + '0');
-		_putchar((m % 100) / 10 + '0');
-		_putchar((m % 100) % 10 + '0');
+		_putchar((m / 100) + 48);
+		_putchar((m % 100) / 10 + 48);
+		_putchar((m % 100) % 10 + 48);
 	}
 	else if (m > 9)
 	{
-		_putchar((m / 10) + '0');
-		_putchar((m % 10) + '0');
+		_putchar((m / 10) + 48);
+		_putchar((m % 10) + 48);
 	}
 	else
 	{
-		_putchar(n + '0');
+		_putchar(n + 48);
 	}
 }
