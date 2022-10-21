@@ -9,13 +9,19 @@
 
 int main(void)
 {
-	long int i;
+	unsigned long int i;
+	unsigned long int j;
+	unsigned long int x = 612852475143;
 
-	for (i = 612852475143; i > 1; i--)
+	for (i = 2; i < x; i++)
 	{
-		if (612852475143 % i == 0)
+		if (x % i == 0)
 		{
-			printf("%ld", i);
+			x = x / i;
 		}
 	}
+	printf("%lu", i);
+	printf("\n");
+
+	return (0);
 }
