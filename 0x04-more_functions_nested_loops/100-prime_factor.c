@@ -10,7 +10,6 @@
 int main(void)
 {
 	unsigned long int i;
-	unsigned long int j;
 	unsigned long int x = 612852475143;
 
 	for (i = 2; i < x; i++)
