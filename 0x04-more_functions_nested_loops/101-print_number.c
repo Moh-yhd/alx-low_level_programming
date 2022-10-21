@@ -39,6 +39,6 @@ void print_number(int n)
 	}
 	else
 	{
-		_putchar(n + 48);
+		_putchar(m + 48);
 	}
 }
