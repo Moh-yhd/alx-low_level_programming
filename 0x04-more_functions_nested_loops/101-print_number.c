@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	unsigned int m = 0;
-	char last;
+	unsigned int last;
 	unsigned int reverse = 0;
 
 	if (n < 0) 
