@@ -18,7 +18,7 @@ void print_number(int n)
 		last = '0' - n % 10;
 		m = n / -10;
 	}
-	else
+	else if (n > 0)
 	{
 		last = n % 10 + '0';
 		m = n / 10;
@@ -33,5 +33,12 @@ void print_number(int n)
 		_putchar(reverse % 10 + '0');
 		reverse = reverse / 10;
 	}
-	_putchar(last);
+	if (n != 0)
+	{
+		_putchar(last);
+	}
+	else
+	{
+		_putchar('0');
+	}
 }
