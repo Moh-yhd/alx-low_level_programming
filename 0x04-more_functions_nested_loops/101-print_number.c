@@ -8,21 +8,30 @@
 
 void print_number(int n)
 {
-	unsigned int m;
+	unsigned int m = 0;
+	unsigned int reverse = 0;
 
 	if (n < 0)
 	{
 		m = -n;
 		_putchar('-');
 	}
-	if (n == 0)
+	else if (n == 0)
 	{
 		_putchar('0');
 	}
-	m = n;
-	if ((m / 10) > 0)
+	else 
 	{
-		print_number(m / 10);
+		m = n;
 	}
-	_putchar(n % 10 + '0');
+	while (m > 0)
+	{
+		reverse = reverse * 10 + m % 10;
+		m = m / 10;
+	}
+	while (reverse > 0)
+	{
+		_putchar(reverse % 10 + '0');
+		reverse = reverse / 10;
+	}
 }
