@@ -8,11 +8,11 @@
 
 void print_number(int n)
 {
-	unsigned int m = 0;
+	unsigned int m;
 	unsigned int last;
 	unsigned int reverse = 0;
 
-	if (n < 0) 
+	if (n < 0)
 	{
 		_putchar('-');
 		last = '0' - n % 10;
