@@ -25,8 +25,8 @@ void print_array(int *a, int n)
 
 void print_number(int n)
 {
-	int m;
-	int reverse = 0;
+	unsigned int m;
+	unsigned int reverse = 0;
 
 	if (n < 0)
 	{
