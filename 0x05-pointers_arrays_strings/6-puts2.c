@@ -30,7 +30,7 @@ void puts2(char *str)
 			if (i != count - 1)
 			{
 				_putchar(str[i]);
-				i = i + 1;
+				i = i + 2;
 			}
 		}
 	}
