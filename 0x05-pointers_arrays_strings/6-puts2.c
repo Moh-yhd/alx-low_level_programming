@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * puts2 - prints every other charachter
@@ -25,15 +26,15 @@ void puts2(char *str)
 
 	else if (count % 2 != 0)
 	{
-		while (str[i] != '\0')
+		while (i != count -1)
 		{
-			if (i != count - 1)
 			{
 				_putchar(str[i]);
 				i = i + 2;
 			}
-			_putchar(s[i]);
 		}
+		
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
