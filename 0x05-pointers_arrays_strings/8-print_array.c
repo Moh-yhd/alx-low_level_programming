@@ -25,37 +25,19 @@ void print_array(int *a, int n)
 
 void print_number(int n)
 {
-	unsigned int m;
-	unsigned int last;
-	unsigned int reverse = 0;
-
 	if (n < 0)
 	{
 		_putchar('-');
-		last = '0' - n % 10;
-		m = n / -10;
+		n = n * -1;
 	}
-	else if (n > 0)
-	{
-		last = n % 10 + '0';
-		m = n / 10;
-	}
-	while (m > 0)
-	{
-		reverse = reverse * 10 + m % 10;
-		m = m / 10;
-	}
-	while (reverse > 0)
-	{
-		_putchar(reverse % 10 + '0');
-		reverse = reverse / 10;
-	}
-	if (n != 0)
-	{
-		_putchar(last);
-	}
-	else
+	
+	if (n == 0)
 	{
 		_putchar('0');
 	}
+	if (n / 10)
+	{
+		print_number(n / 10);
+	}
+	_putchar(n % 10 + '0');	
 }
