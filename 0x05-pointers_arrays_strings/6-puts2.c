@@ -27,11 +27,12 @@ void puts2(char *str)
 	{
 		while (str[i] != '\0')
 		{
-			if (i != count)
+			if (i != count - 1)
 			{
 				_putchar(str[i]);
 				i = i + 2;
 			}
+			_putchar(s[i]);
 		}
 	}
 	_putchar('\n');
