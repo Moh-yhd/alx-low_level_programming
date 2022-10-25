@@ -26,16 +26,19 @@ void print_array(int *a, int n)
 void print_number(int n)
 {
 	unsigned int m;
+	unsigned int last;
 	unsigned int reverse = 0;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		m = n * -1;
+		last = '0' - n % 10;
+		m = n / -10;
 	}
 	else if (n > 0)
 	{
-		m = n;
+		last = n % 10 + '0';
+		m = n / 10;
 	}
 	while (m > 0)
 	{
@@ -47,7 +50,11 @@ void print_number(int n)
 		_putchar(reverse % 10 + '0');
 		reverse = reverse / 10;
 	}
-	if (n == 0)
+	if (n != 0)
+	{
+		_putchar(last);
+
+	else
 	{
 		_putchar('0');
 	}
