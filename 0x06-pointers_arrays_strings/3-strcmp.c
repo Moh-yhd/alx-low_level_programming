@@ -28,7 +28,7 @@ int _strcmp(char *s1, char *s2)
 		}
 	}
 	if (s1[i] < s2[i])
-		flag =-1;
+		flag = -1;
 	if (s1[i] > s2[i])
 		flag = 1;
 	if (count1 == count2)
