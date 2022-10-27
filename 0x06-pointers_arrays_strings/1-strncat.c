@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * *_strcat - concatenates strings
+ * *_strncat - concatenates strings
  * @src: is a string to be added on dest
  * @dest: is a string to accept string src
+ * @n: is number of bytes
  * Return: string dest after concatenation
  */
 
