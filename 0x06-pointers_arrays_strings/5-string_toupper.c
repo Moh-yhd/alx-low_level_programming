@@ -2,16 +2,17 @@
 
 /**
  * string_toupper - converts lower case to upper case
- * Return: pointer to a string
+ * @s: is a sting
+ * Return:a string
  */
 
-char string_toupper(char *s)
+char *string_toupper(char *s)
 {
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] >= a && s[i] <= z)
+		if (s[i] >= 97 && s[i] <= 122)
 		{
 			s[i] = s[i] - 32;
 		}
@@ -20,4 +21,5 @@ char string_toupper(char *s)
 			s[i] = s[i];
 		}
 	}
+	return (s);
 }
