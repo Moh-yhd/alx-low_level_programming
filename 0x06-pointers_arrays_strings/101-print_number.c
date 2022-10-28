@@ -2,7 +2,7 @@
 
 /**
  * print_number -  prints an integer using _putchar
- * @m: is an integer
+ * @n: is an integer
  * Return: nothing
  */
 
