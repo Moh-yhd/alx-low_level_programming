@@ -25,11 +25,13 @@ char *_strpbrk(char *s, char *accept)
 		if (flag == 1)
 			break;
 	}
-	if (flag == 1)
-	{	p = s + i;
-		return (p);
-	}
-	else if (flag == 0)
+	
+	if (flag == 0)
+	{
 		return ('\0');
+	}
+	
+	p = s + i;
+	return (p);
 }
 
