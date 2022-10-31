@@ -12,7 +12,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j;
-	int flag;
+	int flag = 0;
 	char *p;
 
 	for (i = 0; s[i] != '\0'; i++)
@@ -25,7 +25,11 @@ char *_strpbrk(char *s, char *accept)
 		if (flag == 1)
 			break;
 	}
-	p = s + i;
-	return (p);
+	if (flag == 1)
+	{	p = s + i;
+		return (p);
+	}
+	else if (flag == 0)
+		return ('\0');
 }
 
