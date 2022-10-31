@@ -11,7 +11,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i, j;
+	int i, j;
 	int flag;
 	char *p;
 
