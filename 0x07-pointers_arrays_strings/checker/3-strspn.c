@@ -10,23 +10,45 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, len = 0, flag = 0;
+	unsigned int i, j, k, len = 0, flag = 0, flag2;
 	while (accept[len] != '\0')
 		len++;
-	for (i = 0; accept[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; s[j] != '\0'; j++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (accept [i] == s[j])
+			if (s[i] == accept[j])
 			{
-				flag++;
+				printf("loop entered because s[i] is equal to accept[j]\n");
+				if (i == 0)
+				{
+					printf("if intered because i is 0\n");
+					flag++;
+				}
+				else if (i > 0)
+				{
+					for (k = 0; k < i; k++)
+					{
+						printf("repeatition checker loop entered\n");
+						printf("s[%u] = %c - %c s[%u]\n", k, s[k], s[i], i);
+						if (s[k] != s[i])
+						{
+							flag2 = 1;
+						}
+					}
+				}
+				flag = flag + flag2;
 			}
-			printf("s[%u] = %c accept[%u] = %c\n", j, s[j], i, accept[i]);
-			printf("j= %u - %u = i\nflag = %u\n", j, i, flag);
+			printf("flag2 is %u\n", flag2);
+			printf("s[%u] = %c - %c accept[%u]\n", i, s[i], accept[j], j);
+			printf("j= %u - %u = i\nflag = %u\n", i, j, flag);
 		}
-		if (flag == len)
+		flag2 = 0;
+		if (flag == len )
+		{
 			break;
-		flag = 0;
+			printf("it has break here flag = %u len  = %u\n", flag, len);
+		}
 	}
 	return (i);
 }
