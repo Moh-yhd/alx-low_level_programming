@@ -31,10 +31,12 @@ unsigned int _strspn(char *s, char *accept)
 					{
 						printf("repeatition checker loop entered\n");
 						printf("s[%u] = %c - %c s[%u]\n", k, s[k], s[i], i);
-						if (s[k] != s[i])
+						if (s[k] == s[i])
 						{
-							flag2 = 1;
+							flag2 = 0;
 						}
+						else
+							flag2 = 1;
 					}
 				}
 				flag = flag + flag2;
