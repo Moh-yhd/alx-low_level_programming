@@ -40,17 +40,19 @@ unsigned int _strspn(char *s, char *accept)
 					}
 				}
 				flag = flag + flag2;
+				break;
 			}
 			printf("flag2 is %u\n", flag2);
 			printf("s[%u] = %c - %c accept[%u]\n", i, s[i], accept[j], j);
 			printf("j= %u - %u = i\nflag = %u\n", i, j, flag);
+			flag2 = 0;
 		}
-		flag2 = 0;
 		if (flag == len )
 		{
 			break;
 			printf("it has break here flag = %u len  = %u\n", flag, len);
 		}
 	}
+
 	return (i);
 }
