@@ -5,7 +5,7 @@
  * _sqrt - returns the square root of a number
  * @n: is an integer
  * Return: the square of n, if it exists, and -1 if it doesn't exist
- * @m: is an integer. 
+ * @m: is an integer.
  */
 int _sqrt(int n, int m);
 
