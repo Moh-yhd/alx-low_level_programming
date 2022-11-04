@@ -28,7 +28,6 @@ int main(int argc, char *argv[])
 			if (argv[i][j] >= 48 && argv[i][j] <= 57)
 			{
 				temp = atoi(argv[i]);
-				sum = sum + temp;
 			}
 			else
 			{
@@ -37,6 +36,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
+		sum = sum + temp;
 		if (flag == 1)
 			break;
 	}
