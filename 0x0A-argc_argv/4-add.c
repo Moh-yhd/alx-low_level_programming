@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints the programs's name
+ * main - adds number arguments supply to it.
  * @argc: is the number of arguments to the main
  * @argv: an array containg pointers to the argument strings
  * Return: 0 if success
