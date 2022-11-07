@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	len = sizeof(*str) / sizeof(str[0]);
+	len = _len(str);
 	ar = malloc(len * sizeof(char));
 	for (i = 0, j = 0; str[i] != '\0'; i++)
 	{
@@ -26,4 +26,18 @@ char *_strdup(char *str)
 	}
 	return (ar);
 	free(ar);
+}
+
+/**
+ * _len - calculates the length of a string
+ * @s: is a string
+ *
+ * Return: length of a string
+ */
+int _len(char *s)
+{
+	if (*s)
+		return (1 + _len(s + 1));
+	else
+		return (0);
 }
