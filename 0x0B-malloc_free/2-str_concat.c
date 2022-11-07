@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 != NULL)
 	{
-	for (i = 0; s2 != NULL && s2[i] !='\0'; i++)
+	for (i = 0; s2 != NULL && s2[i] != '\0'; i++)
 	{
 		ar[j] = s2[i];
 		j++;
