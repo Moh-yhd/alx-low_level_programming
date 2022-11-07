@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * _strdup - copies a sting to a memory location and retunlrns the pointer for the memory allocated
+ * _strdup - copies a sting to a memory location
+ * and retunlrns the pointer for the memory allocated
  * @str: is a string
  *
  * Return: pointer to a memory location
@@ -18,12 +19,13 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	len = _len(str);
-	ar = malloc(len * sizeof(char));
+	ar = malloc(len * sizeof(char) + 1);
 	for (i = 0, j = 0; str[i] != '\0'; i++)
 	{
 		ar[j] = str[i];
 		j++;
 	}
+	ar[len] = '\0';
 	return (ar);
 	free(ar);
 }
