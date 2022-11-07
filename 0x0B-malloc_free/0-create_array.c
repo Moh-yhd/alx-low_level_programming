@@ -23,8 +23,11 @@ char *create_array(unsigned int size, char c)
 	i = 0;
 	while (i < size)
 	{
-		ar[i] = c;
-		i++;
+		if (c != '\0')
+		{
+			ar[i] = c;
+			i++;
+		}
 	}
 	if (*ar == '\0')
 	{
