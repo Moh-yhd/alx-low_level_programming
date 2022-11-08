@@ -3,7 +3,8 @@
 #include <stdio.h>
 
 /**
- * alloc_grid - allocates a memory for a two dimenaional allar and fills it with zero.
+ * alloc_grid - allocates a memory for a two
+ * dimenaional allar and fills it with zero.
  * @width: is the width of the memory grid
  * @height: is the height if the memory gris
  *
@@ -20,12 +21,17 @@ int **alloc_grid(int width, int height)
 	}
 	ar = malloc(height * sizeof(int *));
 	if (ar == NULL)
+	{
 		return (NULL);
+		free(ar);
+	}
 	for (i = 0; i < height; i++)
 	{
 		ar[i] = malloc(width * sizeof(int));
 		if (ar[i] == NULL)
 		{
+			for (; i >= 0; i--)
+				free(ar[i]);
 			return (NULL);
 		}
 	}
