@@ -13,7 +13,7 @@ char **strtow(char *str)
 	char *temp;
 	char **ar;
 
-	if (str == NULL)
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	nonspace_len = num_nonspace(str);
 	num_words = num_words_calc(str);

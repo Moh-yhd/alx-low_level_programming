@@ -13,7 +13,7 @@ char **strtow(char *str)
 	char *temp;
 	char **ar;
 
-	if (str == NULL)
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	nonspace_len = num_nonspace(str);
 	num_words = num_words_calc(str);
@@ -92,7 +92,7 @@ int *num_words_len(char *str)
 }
 
 /**
- * num_words - calculates the number of words in a string
+ * num_words_calc - calculates the number of words in a string
  * @str: is a string
  * Return: integer - num of words
  */
