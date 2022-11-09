@@ -35,7 +35,7 @@ char **strtow(char *str)
 	}
 	for (i = 0; i < num_words; i++)
 	{
-		ar[i] = malloc(word_len[i] * (sizeof(char) + 1));
+		ar[i] = malloc(word_len[i] * (sizeof(char)) + 1);
 		if (ar[i] == NULL)
 		{
 			return (NULL);
@@ -92,7 +92,7 @@ int *num_words_len(char *str)
 }
 
 /**
- * num_words - calculates the number of words in a string
+ * num_words_calc - calculates the number of words in a string
  * @str: is a string
  * Return: integer - num of words
  */
