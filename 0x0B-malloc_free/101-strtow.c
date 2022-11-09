@@ -27,6 +27,31 @@ char **strtow(char *str)
 			j++;
 		}
 	}
+	ar = _buffer(str);
+	for (i = 0, k = 0; i < num_words; i++)
+	{
+		for (j = 0; j < word_len[i]; j++)
+		{
+			ar[i][j] = temp[k];
+			k++;
+		}
+		ar[i][j] = '\0';
+	}
+	return (ar);
+}
+/**
+ * _buffer - creates a buffer
+ * @str: is a string
+ * Return: pointer to a memory location
+ */
+char **_buffer(char *str)
+{
+	char **ar;
+	int i, num_words;
+	int *word_len;
+
+	num_words = num_words_calc(str);
+	word_len = num_words_len(str);
 	ar = malloc((num_words + 1) * sizeof(char *));
 	if (ar == NULL)
 	{
@@ -42,15 +67,6 @@ char **strtow(char *str)
 			for (; i >= 0; i--)
 				free(ar[i]);
 		}
-	}
-	for (i = 0, k = 0; i < num_words; i++)
-	{
-		for (j = 0; j < word_len[i]; j++)
-		{
-			ar[i][j] = temp[k];
-			k++;
-		}
-		ar[i][j] = '\0';
 	}
 	return (ar);
 }

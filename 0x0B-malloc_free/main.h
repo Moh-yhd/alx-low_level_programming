@@ -9,4 +9,4 @@ char **strtow(char *str);
 int *num_words_len(char *);
 int num_words_calc(char *);
 int num_nonspace(char *str);
-
+char **_buffer(char *str);
