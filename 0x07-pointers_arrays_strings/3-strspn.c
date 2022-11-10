@@ -12,6 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	unsigned int i, j, k;
 	unsigned int len = 0, flag = 0, flag2;
 
@@ -37,6 +38,12 @@ unsigned int _strspn(char *s, char *accept)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 >>>>>>> Stashed changes
+=======
+	unsigned int i, j, k, len = 0, flag = 0, flag2 =0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+>>>>>>> Stashed changes
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (accept[j] == s[i])
@@ -52,6 +59,9 @@ unsigned int _strspn(char *s, char *accept)
 						else
 							flag2 = 0;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -72,11 +82,14 @@ unsigned int _strspn(char *s, char *accept)
 		break;
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		flag2 = 0;
 	}
 	if (flag == len)
 		break;
 	}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 			}
