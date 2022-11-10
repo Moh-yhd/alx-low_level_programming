@@ -27,7 +27,7 @@ int main(void)
 {
     char **tab;
 
-    tab = strtow("      ALX School         #cisfun      ");
+    tab = strtow("The quick bron fox trully jumps over the laze          dog. Not a big fun of cat");
     if (tab == NULL)
     {
         printf("Failed\n");
