@@ -6,6 +6,7 @@
  * n bytes of string two
  * @s1: is a string to be concatenated
  * @s2: is a string to be concatenated
+ * @n: is number of bites
  *
  * Return: pointer to a string if success
  * NULL if fails allocating required memory
