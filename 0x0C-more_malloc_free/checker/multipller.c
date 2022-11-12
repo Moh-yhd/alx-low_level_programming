@@ -14,9 +14,9 @@ int *alloc_width(int width);
 
 int main(int __attribute__ ((unused)) argc, char **argv)
 {
-	int i = 0, j = 0, k, l, len1, len2, height, width;
+	int i = 0, j = 0, carry = 0, k, l, len1, len2, height, width;
 	int *num1, *num2, *mul;
-	int **grid;
+	int **grid, **ord;
 
 	while(*(argv[1] + i) != '\0')
 		i++;
@@ -36,26 +36,67 @@ int main(int __attribute__ ((unused)) argc, char **argv)
 	width = (2 * len1) - (len2 - len1);
 	num1 = alloc_width(width);
 	num2 = alloc_width(height);
+	mul = alloc_width(width);
+	if (i > j)
+	{
 	for (i = 0, j = 0; i < len1; i++, j++)
 		num1[j] = argv[1][i] - '0';
 	for (i = 0, j = 0; i < len2; i++, j++)
 		num2[j] = argv[2][i] - '0';
+	}
+	else
+	{
+	for (i = 0, j = 0; i < len1; i++, j++)
+		num1[j] = argv[2][i] - '0';
+	for (i = 0, j = 0; i < len2; i++, j++)
+		num2[j] = argv[1][i] - '0';
+	}
+
 	grid = alloc_grid(width, height);
+	ord = alloc_grid(width, height);
 	for (i = 0, k = 0; i < height && k < height; i++, k++)
 	{
-		for (j = 0, l = 0; j < (width) && l < (width); j++, l++)
+		for (j = 0, l = k + 1; j < width && l < width; j++, l++)
 		{
-			grid[k][l] = num1[j] * num2[i];
+
+			grid[k][l] = (num1[i] * num2[j]);
 		}
 	}
+	for (i = 0, k = 0; i < height && k < height; i++, k++)
+	{
+		for (j = width - 1, l = width - 1; j >= 0 && l >= 0; j--, l--)
+		{
+			ord[k][l] = (carry + grid[i][j]) % 10;
+			carry = (grid[i][j] / 10);
+		}
+		carry = 0;
+	}
+
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
 			printf("%d ", grid[i][j]);
 		printf("\n");
 	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			printf("%d ", ord[i][j]);
+		printf("\n");
+	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0, k = 0; j < width; j++, k++)
+			mul[k] = mul[k] + ord[i][j];
+	}
+	for (j = 0; j < width; j++)
+		printf("%d", num2[j]);
+		printf("\ni = %d, k = %d j = %d l = %d grid[0][1] = %d\n", i, k, j, l, grid[0][1]);
 	for (j = 0; j < width; j++)
 		printf("%d", num1[j]);
+		printf("\n");
+	for (j = 0; j < width; j++)
+		printf("%d ", mul[j]);
 		printf("\n");
 
 	return (0);
