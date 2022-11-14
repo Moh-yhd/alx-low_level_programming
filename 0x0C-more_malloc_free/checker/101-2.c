@@ -27,6 +27,15 @@ int **alloc_grid(int width, int height)
 			ar[i][j] = 0;
 		}
 	}
+	printf("alloc grid\n");
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			printf("%d ", ar[i][j]);
+		printf("\n");
+	}
+	printf("\n\n");
+
 	return (ar);
 }
 
@@ -132,6 +141,24 @@ int **grid_pop(int **grid, int *num1, int *num2, int height, int width)
 {
 	int i, j, k, l;
 
+	printf("num1\n");
+	for (i = 0; i < width; i++)
+		printf("%d ", num1[i]);
+	printf("\n");
+	printf("num2\n");
+	for (i = 0; i < width; i++)
+		printf("%d ", num2[i]);
+	printf("\n");
+
+	printf("grid before\n");
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			printf("%d ", grid[i][j]);
+		printf("\n");
+	}
+	printf("\n\n");
+
 	for (i = 0, k = 0; i < height && k < height; i++, k++)
 	{
 		for (j = 0, l = k + 1; j < width && l < width; j++, l++)
@@ -140,6 +167,13 @@ int **grid_pop(int **grid, int *num1, int *num2, int height, int width)
 			grid[k][l] = (num1[i] * num2[j]);
 		}
 	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			printf("%d ", grid[i][j]);
+		printf("\n");
+	}
+	printf("\n\n");
 
 
 	return(grid);
@@ -205,7 +239,11 @@ void print_num(int *print, int *num1, int len1, int *num2, int len2)
 	int i;
 	int flag;
 
+	for (i = 0; i < len2; i++)
+		printf("%d ", num1[i]);
+	printf("\n");
 	flag = num1[len1 - 1] * num2[len2 - 1];
+	printf("flag = %d, len1 = %d, len2 = %d,  num1[len1] = %d, num2[len2] = %d\n", flag, len1, len2, num1[len1 -1 ], num2[len2 - 1]);
 	if (flag == 0)
 	{
 		if (print[0] != 0)
@@ -243,28 +281,62 @@ int main(int __attribute__ ((unused)) argc, char **argv)
 	
 	len1 = max_len(argv);
 	len2 = min_len(argv);
+	printf("len1 = %d, len2 = %d ", len1, len2);
 	height = len1;
 	width = (2 * len1) - (len2 - len1);
 	num1 = alloc_width(width);
 	num2 = alloc_width(width);
 	mul = alloc_width(width);
 	res = alloc_width(width);
+	printf("num1 and num2\n");
 	num1 = pop_one_d(num1, argv, 1);
+	for (i = 0; i < len1; i++)
+		printf("%d ", num1[i]);
+	printf("\n");
 	num2 = pop_one_d(num2, argv, 0);
+	for (i = 0; i < len2; i++)
+		printf("%d ", num2[i]);
+	printf("\n");
 	grid = alloc_grid(width, height);
 	grid = grid_pop(grid, num1, num2, height, width);
+	printf("grid\n");
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			printf("%d ", grid[i][j]);
+		printf("\n");
+	}
+	printf("\n");
 	ord = alloc_grid(width, height);
 	ord = grid_adj(grid, ord, height, width);
+	printf("ord\n");
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			printf("%d ", ord[i][j]);
+		printf("\n");
+	}
+	printf("\n");
+
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0, k = 0; j < width; j++, k++)
 			mul[k] = mul[k] + ord[i][j];
 	}
+	printf("mul\n");
+	for (i = 0; i < width; i++)
+		printf("%d ", mul[i]);
+	printf("\n");
+
 	for (i = width - 1; i >= 0; i--)
 	{
 		res[i] = (carry + mul[i]) % 10;
 		carry = (mul[i] + carry) / 10;
 	}
+	printf("res\n");
+	for (i = 0; i < width; i++)
+		printf("%d ", res[i]);
+	printf("\n");
 	print_num(res, num1, len1, num2, len2);
 	return (0);
 }
