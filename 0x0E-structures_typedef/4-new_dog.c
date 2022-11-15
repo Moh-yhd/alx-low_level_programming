@@ -19,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		j++;
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	my_dog = malloc(sizeof(dog_t) + 4);
+	my_dog = malloc(sizeof(dog_t));
 	if (my_dog == NULL)
 	{
 		return (NULL);
@@ -44,6 +44,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	copy_str(owner, my_dog->owner);
 	return (my_dog);
 }
+
+/**
+ * copy_str - copies a sting to a memory location
+ * @s1: is a pointer to the string to be copied
+ * @s2: is a pointer to a memory location where s1 is to be copied
+ *
+ * Return: pointer to s2
+ */
 char *copy_str(char *s1, char *s2)
 {
 	int i;
