@@ -22,22 +22,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	my_dog = malloc(sizeof(dog_t));
 	if (my_dog == NULL)
 	{
-		return (NULL);
 		free(my_dog);
+		return (NULL);
 	}
 	my_dog->name = malloc(i * sizeof(char) + 1);
 	if (my_dog->name == NULL)
 	{
-		return (NULL);
 		free(my_dog);
 		free(my_dog->name);
+		return (NULL);
 	}
 	my_dog->owner = malloc(j * sizeof(char) + 1);
 	if (my_dog->owner == NULL)
 	{
-		return (NULL);
 		free(my_dog);
+		free(my_dog->name);
 		free(my_dog->owner);
+		return (NULL);
 	}
 	copy_str(name, my_dog->name);
 	my_dog->age = age;
