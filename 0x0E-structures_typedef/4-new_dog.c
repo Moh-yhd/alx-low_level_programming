@@ -37,7 +37,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 		free(my_dog);
-		free(my_dog->name);
+		free(my_dog->owner);
 	}
 	copy_str(name, my_dog->name);
 	my_dog->age = age;
