@@ -9,6 +9,12 @@ typedef struct format
 		void (*func)(va_list ap);
 	}func_stru;
 
+typedef struct
+{
+	char checker;
+	int (*func)(va_list qp)
+}
+
 
 /**
  *
@@ -107,22 +113,26 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{ 
-		if (format[i] != '%')
-			_putchar(format[i]);
+		//if (format[i] != '%')
+			//_putchar(format[i]);
 		if (format[i] == '%')
 		{
 			for (j = 0; j < 2; j++)
-				if (format[i + 1] != '\0' && format[i + 1] == func_list[j].format)
+			{
+			if (format[i + 1] != '\0' && format[i + 1] == func_list[j].format)
 				{
 				func_list[j].func(ap);
 				}
+			}
 		}
 	}
+	va_end(ap);
+	return (0);
 }
 
 int main(void)
 {
-	_printf("the quick %s fox jumps of %c dog called %c  ", "Brown", 'A', 'B');
+	_printf("the quick %s fox %s over %c dog called %c  ", "Brown", "jumps", 'A', 'B');
 	_putchar('\n');
 
 	return (0);
