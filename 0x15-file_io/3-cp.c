@@ -42,12 +42,12 @@ int main(int ac, char **av)
 		w_bytes = write(fd2, buff, r_bytes);
 		if (r_bytes != w_bytes)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", av[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 		if (r_bytes == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]);
 			exit(98);
 		}
 	}
