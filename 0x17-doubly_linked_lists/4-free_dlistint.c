@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_dlisint - frees a double linked list
+ * free_dlistint - frees a double linked list
  * @head: is a pointer to the head of the list
  *
  * Return: nothing
