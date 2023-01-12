@@ -15,13 +15,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	temp = head;
 	while (temp)
 	{
-		i++;
-		temp = temp->next;
 		if (i == index)
 		{
 			return (temp);
-			break;
 		}
+		temp = temp->next;
+		i++;
+
 	}
 	return (NULL);
 }
